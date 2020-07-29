@@ -31,7 +31,6 @@ export const Papers = ({ data }) => {
     Object.keys(data).map((key, index) => {
       virus[index] = data[key];
     });
-    console.log(virus[0]);
   }
   return (
     <React.Fragment>

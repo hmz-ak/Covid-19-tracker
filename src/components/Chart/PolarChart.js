@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { fetchData } from "../../api";
-import { Pie } from "react-chartjs-2";
+import { Polar } from "react-chartjs-2";
 
-export function Chart() {
+export function PolarChart() {
   var virus = [];
   const [data_chart, setData] = useState({});
 
@@ -66,8 +66,8 @@ export function Chart() {
 
   return (
     <div>
-      <h2 style={{ textAlign: "center" }}>Pie Visuals</h2>
-      <Pie data={data} height={200} />
+      <h2 style={{ textAlign: "center" }}>Polar Visuals</h2>
+      <Polar data={data} height={200} />
     </div>
   );
 }

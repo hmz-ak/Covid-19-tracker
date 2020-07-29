@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { Chart, CountrySelector, Papers } from "./components";
+import { CountrySelector, Papers } from "./components";
 import { fetchData } from "./api";
+import { ChartGrid } from "./components/Chart/chartGrid";
 function App() {
   const [data, setData] = useState();
   useEffect(() => {
@@ -11,12 +12,12 @@ function App() {
     }
     fetch();
   }, []);
-  console.log(data);
+
   return (
     <div>
       <Papers data={data} />
       <CountrySelector />
-      <Chart />
+      <ChartGrid />
     </div>
   );
 }

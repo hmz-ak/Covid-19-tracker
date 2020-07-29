@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const url = "https://api.thevirustracker.com/free-api?global=stats";
-
+const url2 = "https://api.thevirustracker.com/free-api?countryTotals=ALL";
 export const fetchData = async () => {
   try {
     const { data } = await axios.get(url);
@@ -21,3 +21,10 @@ export const fetchData = async () => {
     return dataThatWeNeed;
   } catch (error) {}
 };
+
+// export const chartData = async () => {
+//   try {
+//     const response = await axios.get(url);
+//     return response;
+//   } catch (error) {}
+// };
