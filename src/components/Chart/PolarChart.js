@@ -13,13 +13,12 @@ export function PolarChart() {
     fetch_Data();
   }, []);
   if (!data_chart) {
-    console.log("waiting");
+    return "Waiting for Chart";
   }
+
   Object.keys(data_chart).map((key, index) => {
     virus[index] = data_chart[key];
   });
-
-  console.log(virus);
 
   const data = {
     labels: [
