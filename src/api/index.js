@@ -6,8 +6,10 @@ const url3 = "https://api.thevirustracker.com/free-api?countryTotal=";
 export const fetchData = async (country) => {
   console.log(country);
   let changeAbleUrl = url3;
+
   if (country) {
-    changeAbleUrl = `${url3}/${country}`;
+    changeAbleUrl = `${url3}${country}`;
+    console.log(changeAbleUrl);
     try {
       const response = await axios.get(changeAbleUrl);
 

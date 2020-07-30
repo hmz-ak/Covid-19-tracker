@@ -29,6 +29,9 @@ export const CountrySelector = ({ handleCountry }) => {
           onChange={(e) => {
             handleCountry(e.target.value);
           }}
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
           style={{ textAlign: "center" }}
         >
           <option value="global">Global</option>
