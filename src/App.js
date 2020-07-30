@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { CountrySelector, Papers } from "./components";
 import { fetchData } from "./api";
+import { fetchDataCountry } from "./api/countryAPI";
 import { ChartGrid } from "./components/Chart/chartGrid";
 function App() {
   const [data, setData] = useState();
@@ -24,7 +25,7 @@ function App() {
   // console.log(country_data);
 
   const handleCountry = async (country) => {
-    const data1 = await fetchData(country);
+    const data1 = await fetchDataCountry(country);
     console.log(country);
     setCountry(await data1);
   };
